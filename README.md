@@ -25,7 +25,7 @@ Three questions, answered by three different layers — never collapse them:
 2. **How does the money move?** → a *settlement rail* (x402 for onchain USDC, ACP for tokenized card). The mandate is checked first; the rail moves value second.
 3. **Can we prove what happened?** → an append-only *audit trail* + a human-approval gate for anything outside the mandate's bounds.
 
-Authorization and settlement are separable concerns. AP2 answers #1; x402 and ACP answer #2; the governance layer (our [payment-intelligence-system](https://github.com/frankxai/payment-intelligence-system) MCP) enforces #1 *before* #2 and records #3.
+Authorization and settlement are separable concerns. AP2 answers #1; x402 and ACP answer #2; the governance layer (the [payment-intelligence-system](https://github.com/frankxai/payment-intelligence-system) MCP) enforces #1 *before* #2 and records #3.
 
 ## Protocols & Standards
 
@@ -33,9 +33,9 @@ The open standards for agent-initiated payments. These are specs to adopt, not s
 
 | Name | Owner | Role | License | Link |
 |---|---|---|---|---|
-| **AP2** (Agent Payments Protocol) | Google + 60 partners (Mastercard, Amex, PayPal, Adyen, Coinbase) | **Authorization** — cryptographically signed mandates (Verifiable Credentials) prove a user authorized a specific purchase. Payment-method agnostic; does not move money. v0.2.0 (Apr 2026). | Apache 2.0 | [ap2-protocol.org](https://ap2-protocol.org/) · [github](https://github.com/google-agentic-commerce/AP2) |
+| **AP2** (Agent Payments Protocol) | Google + 60 partners (Mastercard, Amex, PayPal, Adyen, Coinbase) | **Authorization** — cryptographically signed mandates (Verifiable Credentials) prove a user authorized a specific purchase. Payment-method agnostic; does not move money. v0.2.0 (Apr 2026). | Apache 2.0 | [ap2-protocol.org](https://ap2-protocol.org/) · [GitHub](https://github.com/google-agentic-commerce/AP2) |
 | **x402** | x402 Foundation (Coinbase + Cloudflare); members incl. Google, Visa, AWS, Circle, Anthropic, Vercel | **Settlement rail** — revives HTTP `402 Payment Required`; the agent signs a USDC stablecoin transaction onchain (Base / Solana). Account-less, zero protocol fee. | Apache 2.0 | [x402.org](https://www.x402.org/) · [foundation announcement](https://www.coinbase.com/blog/coinbase-and-cloudflare-will-launch-x402-foundation) |
-| **ACP** (Agentic Commerce Protocol) | OpenAI + Stripe | **Checkout rail** — a Shared Payment Token lets an agent pay without seeing card credentials; OAuth 2.0 delegated auth. Powers ChatGPT Instant Checkout. Beta. | Apache 2.0 | [github](https://github.com/agentic-commerce-protocol/agentic-commerce-protocol) · [Stripe docs](https://docs.stripe.com/agentic-commerce/acp) |
+| **ACP** (Agentic Commerce Protocol) | OpenAI + Stripe | **Checkout rail** — a Shared Payment Token lets an agent pay without seeing card credentials; OAuth 2.0 delegated auth. Powers ChatGPT Instant Checkout. Beta. | Apache 2.0 | [GitHub](https://github.com/agentic-commerce-protocol/agentic-commerce-protocol) · [Stripe Docs](https://docs.stripe.com/agentic-commerce/acp) |
 | **Visa Intelligent Commerce** | Visa | Network-side agent enablement — tokenized credentials bound to a specific agent, user authentication, spend controls, and dispute signals. | Proprietary (network) | [developer.visa.com](https://developer.visa.com/capabilities/visa-intelligent-commerce) |
 | **Mastercard Agent Pay** | Mastercard | Network-side agent enablement — Agentic Tokens (scoped, de-tokenized by MDES so the card number never reaches the agent) + agent-aware identity/checkout. | Proprietary (network) | [mastercard.com](https://www.mastercard.com/global/en/news-and-trends/press/2025/april/mastercard-unveils-agent-pay-pioneering-agentic-payments-technology-to-power-commerce-in-the-age-of-ai.html) |
 
@@ -45,11 +45,11 @@ The open standards for agent-initiated payments. These are specs to adopt, not s
 
 MCP servers that give an agent payment capability — or, more importantly, *govern* it.
 
-- [payment-intelligence-system](https://github.com/frankxai/payment-intelligence-system) — our own **governance control surface** (not just a payment connector). A small, fail-closed Payments MCP exposing `verify_mandate`, `check_spend_cap`, `record_audit_entry`, `require_human_approval` — verifies the AP2 mandate and enforces spend caps *before* any rail settles. ⚠️ v0.1 scaffold, unaudited, not for live funds. The reason this list exists: a payment MCP should *gate*, not just *spend*.
+- [payment-intelligence-system](https://github.com/frankxai/payment-intelligence-system) — a **governance control surface** (not just a payment connector). A small, fail-closed Payments MCP exposing `verify_mandate`, `check_spend_cap`, `record_audit_entry`, `require_human_approval` — verifies the AP2 mandate and enforces spend caps *before* any rail settles. ⚠️ v0.1 scaffold, unaudited, not for live funds. The reason this list exists: a payment MCP should *gate*, not just *spend*.
 - [`agentic-payments` MCP](https://github.com/google-agentic-commerce/AP2/issues/96) — AP2 reference implementation with Visa TAP support, exposed as an MCP server (`npx agentic-payments mcp`) giving an assistant a set of payment tools backed by Ed25519-signed mandates. Tracks the AP2 spec. (See [Authorization & Mandate Libraries](#authorization--mandate-libraries) for the library form.)
 - [Stripe MCP](https://docs.stripe.com/mcp) — Stripe's official MCP server; pairs with ACP for tokenized-card checkout flows.
 
-> **The build-vs-adopt rule (why our server exists at all):** build a payment MCP only when it's a *control surface* over money — small, testable, fail-closed. Everything else, adopt a vendor server. A governance MCP that rejects on ambiguity is worth more than one that can spend.
+> **The build-vs-adopt rule:** build a payment MCP only when it's a *control surface* over money — small, testable, fail-closed. Everything else, adopt a vendor server. A governance MCP that rejects on ambiguity is worth more than one that can spend.
 
 ## Authorization & Mandate Libraries
 
