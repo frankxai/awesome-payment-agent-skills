@@ -32,6 +32,7 @@ Open protocols that move money between agents, services, and machines.
 
 - [x402](https://github.com/x402-foundation/x402) - Internet-native payments over the HTTP `402 Payment Required` status code, stewarded by the x402 Foundation with founding members including Visa, Mastercard, Stripe, Google, Cloudflare, and Coinbase.
 - [AP2](https://github.com/google-agentic-commerce/AP2) - Google's Agent Payments Protocol using signed payment mandates to authorize agent-initiated payments across cards, account-to-account rails, and digital assets.
+- [Stripe MPP](https://stripe.com/docs/machine-payments) - Stripe's Machine Payments Protocol (Mar 2026): a pre-authorized session envelope with per-use metered settlement, designed for AI agents that need to pay for API calls and services without per-transaction user confirmation.
 - [a2a-x402](https://github.com/google-agentic-commerce/a2a-x402) - Extension bringing x402 on-chain payments to the Agent2Agent (A2A) protocol so agents can monetize their services.
 - [H402](https://github.com/bit-gpt/h402) - Independent HTTP 402 machine-to-machine payment protocol for APIs, compute, and data.
 - [KYAPay](https://github.com/skyfire-xyz/kyapay) - Know-Your-Agent + Pay protocol combining verified agent identity with JWT token-based payments, no wallets or gas required.
@@ -53,6 +54,7 @@ Protocols for agent-driven product discovery, carts, and checkout.
 
 Official SDKs from payment providers that give agent frameworks payment tools out of the box.
 
+- [Amazon Bedrock AgentCore Payments](https://aws.amazon.com/bedrock/agentcore/) - AWS preview service (Apr 2026) giving Bedrock agents a managed payment credential store with Coinbase and Stripe integrations for autonomous purchasing and API monetization.
 - [Coinbase AgentKit](https://github.com/coinbase/agentkit) - Framework-agnostic toolkit that gives every AI agent a crypto wallet and on-chain actions, with adapters for LangChain, Vercel AI SDK, OpenAI Agents SDK, and MCP.
 - [GOAT SDK](https://github.com/goat-sdk/goat) - Agentic finance toolkit with 100+ plugins for payments, swaps, and commerce across EVM and Solana, adaptable to any agent framework.
 - [Nevermined Payments](https://github.com/nevermined-io/payments) - TypeScript SDK for agent commerce with credit-based pricing plans, fiat and crypto checkout, and built-in MCP and A2A integration.
@@ -67,7 +69,7 @@ Model Context Protocol servers that expose payment capabilities as agent tools.
 - [Crossmint Checkout MCP](https://github.com/Crossmint/mcp-crossmint-checkout) - MCP server for purchasing physical and digital goods through Crossmint's headless checkout.
 - [Lightning MCP Server](https://github.com/lightninglabs/lightning-agent-tools/tree/main/lightning-mcp-server) - Read-only tools for Lightning node state over Lightning Node Connect, part of Lightning Agent Tools.
 - [Nevermined MCP Integration](https://github.com/nevermined-io/payments/tree/main/docs) - Register MCP tools, resources, and prompts behind per-request credit pricing with bearer-token validation.
-- [PayPal MCP Server](https://github.com/paypal/agent-toolkit/tree/main/modelcontextprotocol) - Official PayPal MCP server exposing 30+ payment, invoicing, and commerce tools.
+- [PayPal MCP Server](https://github.com/paypal/agent-toolkit/tree/main/modelcontextprotocol) - Official PayPal MCP server exposing 30+ payment, invoicing, and commerce tools (as of 2026-06).
 - [Stripe MCP Server](https://github.com/stripe/ai/tree/main/tools/modelcontextprotocol) - Official Stripe MCP server, available remote at `mcp.stripe.com` or local via `npx @stripe/mcp`, with restricted-key permission control.
 
 ## Identity and Trust
@@ -94,12 +96,14 @@ Landscape analyses, specifications, and documentation for going deeper.
 
 - [Agent Payment Protocols Landscape](https://github.com/Custena/agent-payment-protocols) - Neutral technical analysis comparing x402, MPP, L402, AP2, Visa TAP and ICC, Mastercard Agent Pay, UCP, ACP, and more, with footnoted primary sources.
 - [Agent Skills Specification](https://agentskills.io) - Open specification for the `SKILL.md` agent skill format.
-- [Mastercard Agent Pay](https://www.mastercard.com/global/en/business/issuers/agent-pay.html) - Mastercard's agentic payments program built on SD-JWT verifiable intent credentials.
+- [Mastercard Agent Pay](https://www.mastercard.com/global/en/business/issuers/agent-pay.html) - Mastercard's agentic payments program (Apr 2025) built on SD-JWT verifiable intent credentials for intent and cart mandates.
+- [Mastercard Agent Pay for Machines](https://www.mastercard.com/global/en/business/issuers/agent-pay.html) - Mastercard's M2M payment extension (Jun 2026) enabling machine-to-machine mandate authorization via verifiable SD-JWT credentials, purpose-built for autonomous agent commerce without human-in-the-loop checkout.
 - [Stripe MCP Documentation](https://docs.stripe.com/mcp) - Official guide for connecting agents to Stripe via MCP.
 - [x402 Documentation](https://docs.x402.org) - Official developer documentation for the x402 protocol, facilitators, and SDKs.
 
 ### Related Lists
 
+- [Payment Intelligence System](https://github.com/frankxai/payment-intelligence-system) - Six-sub-system intelligence layer (Rails, Mandates, Commerce, Treasury, Compliance, Ops) with 24 commands and a full research KB for agentic-payments operators. Built on SIP.
 - [awesome-agentic-commerce](https://github.com/damoahdominic/awesome-agentic-commerce) - Documents the shift from humans clicking buy buttons to agents transacting on behalf of users.
 - [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) - The largest curated list of MCP servers across every category, including finance and payments.
 - [awesome-ucp](https://github.com/Upsonic/awesome-ucp) - Curated Universal Commerce Protocol resources, tools, and implementations.
