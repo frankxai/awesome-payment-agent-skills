@@ -1,3 +1,17 @@
+<!-- GITHUB_VISUALS_START -->
+<p align="center">
+  <img src="assets/github/header.svg" alt="Awesome Payment Agent Skills - Curated payment protocols and safety tooling" width="100%">
+</p>
+
+<details open>
+<summary><strong>How this repo works</strong></summary>
+<p align="center">
+  <img src="assets/github/how-it-works.svg" alt="Awesome Payment Agent Skills operating map" width="100%">
+</p>
+</details>
+
+<!-- GITHUB_VISUALS_END -->
+
 # Awesome Payment Agent Skills [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 > A curated list of protocols, MCP servers, libraries, SDKs, and playbooks for **giving AI agents the power to pay — safely.** Authorization, settlement, and the guardrails that sit between an agent and your money.
