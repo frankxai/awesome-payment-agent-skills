@@ -1,12 +1,19 @@
 <!-- GITHUB_VISUALS_START -->
 <p align="center">
-  <img src="assets/github/header.svg" alt="Awesome Payment Agent Skills - Curated payment protocols and safety tooling" width="100%">
+  <img src="assets/github/header.svg" alt="Awesome Payment Agent Skills - Curated payment protocols and safety tooling." width="100%">
 </p>
 
 <details open>
 <summary><strong>How this repo works</strong></summary>
 <p align="center">
   <img src="assets/github/how-it-works.svg" alt="Awesome Payment Agent Skills operating map" width="100%">
+</p>
+</details>
+
+<details>
+<summary><strong>Build, deploy, verify path</strong></summary>
+<p align="center">
+  <img src="assets/github/build-deploy-verify.svg" alt="Awesome Payment Agent Skills build deploy verify path" width="100%">
 </p>
 </details>
 
