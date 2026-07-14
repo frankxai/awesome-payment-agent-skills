@@ -87,6 +87,7 @@ Build agent-side and merchant-side payment flows.
 - [Stripe Agentic Commerce (ACP)](https://docs.stripe.com/agentic-commerce/acp) — merchant + agent SDK for Shared Payment Token checkout; the production path behind ChatGPT Instant Checkout.
 - [Coinbase AgentKit](https://github.com/coinbase/agentkit) — "every AI agent deserves a wallet": framework-agnostic toolkit to give an agent an onchain wallet for x402-style USDC settlement. [Docs](https://docs.cdp.coinbase.com/agent-kit/welcome) · [Node](https://github.com/coinbase/cdp-agentkit-nodejs).
 - [x402 ecosystem & facilitators](https://www.x402.org/ecosystem) — the registry of x402 facilitators (the services that verify and settle the `402` USDC payment) and middleware for adding `402` to any API/endpoint.
+- [AgentServices](https://agentservices.to) — 54 x402-paid data APIs for AI agents (crypto, forex, stocks, AI inference). 37 MCP tools. Agents pay per-call via USDC on Base. [GitHub](https://github.com/vbkotecha/aiservices-api)
 - [Visa Intelligent Commerce for Agents](https://developer.visa.com/use-cases/visa-intelligent-commerce-for-agents) — Visa's developer use-case docs for agent-scoped tokenized credentials.
 
 ## Safety & Audit Tooling
