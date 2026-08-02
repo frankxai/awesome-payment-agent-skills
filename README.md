@@ -111,6 +111,52 @@ Spend authority is a security surface. These are the patterns that keep an agent
 
 **The five principles:** authorization ≠ settlement · scoped mandates over standing access · human gate for the unknown · audit everything · fail closed.
 
+## August 2026 research pulse
+
+This maintenance pass re-checked primary repositories through GitHub metadata on 2026-08-03. The existing protocol entries above remain the authoritative starting point; these snapshots clarify current source posture rather than recommend a live-money integration.
+
+| Project | Pulse snapshot | Curation note |
+| --- | --- | --- |
+| [AP2](https://github.com/google-agentic-commerce/AP2) | Apache-2.0 · 3,130★ | Primary authorization-protocol source; assess mandate verification in an isolated, human-approved pilot. |
+| [Agentic Commerce Protocol](https://github.com/agentic-commerce-protocol/agentic-commerce-protocol) | Apache-2.0 · 1,498★ | Open interaction standard maintained by OpenAI and Stripe; checkout is not authorization proof. |
+| [Coinbase AgentKit](https://github.com/coinbase/agentkit) | NOASSERTION · 1,277★ | Wallet-adjacent toolkit; never treat it as a spend-control layer. |
+| [MCP Registry](https://github.com/modelcontextprotocol/registry) | NOASSERTION · 7,097★ | Discovery registry only; each server requires independent permission and egress review. |
+| [OpenMeter](https://github.com/openmeterio/openmeter) | Apache-2.0 · 2,168★ | Usage metering for auditability and cost visibility. |
+| [Lago](https://github.com/getlago/lago) | AGPL-3.0 · 10,282★ | Usage-based billing infrastructure; license and payment-data boundaries need review. |
+| [Stripe Node](https://github.com/stripe/stripe-node) | MIT · 4,477★ | Official SDK; production payment authorization remains a human-gated architecture decision. |
+
+## 6-Pillar curation lens
+
+```mermaid
+mindmap
+  root((Agentic payments))
+    Strategy
+      use case and rail
+    Governance
+      mandate and spend cap
+    Talent
+      accountable approver
+    Technology
+      protocol and adapter
+    Data
+      immutable audit trail
+    Ethics
+      fail closed
+```
+
+The lens is editorial, not a security certification. `NOASSERTION` means GitHub did not return a standard SPDX identifier; review every project’s current license and documentation before adoption.
+
+## Explore the Full FrankX Awesome Ecosystem (optional)
+
+Companion catalogs are optional; the external primary sources above are this list's core value.
+
+- [awesome-jarvis](https://github.com/frankxai/awesome-jarvis) · [awesome-hermes-agents](https://github.com/frankxai/awesome-hermes-agents) · [awesome-manifestation-skills](https://github.com/frankxai/awesome-manifestation-skills) · [awesome-ai-coe](https://github.com/frankxai/awesome-ai-coe)
+- [awesome-agentic-income](https://github.com/frankxai/awesome-agentic-income) · [awesome-investor-agent-skills](https://github.com/frankxai/awesome-investor-agent-skills) · [awesome-design-agent-skills](https://github.com/frankxai/awesome-design-agent-skills) · [awesome-agent-operating-systems](https://github.com/frankxai/awesome-agent-operating-systems)
+- [awesome-music-agent-skills](https://github.com/frankxai/awesome-music-agent-skills) · [awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills) · [awesome-gamification-agent-skills](https://github.com/frankxai/awesome-gamification-agent-skills) · [awesome-wealth-agent-skills](https://github.com/frankxai/awesome-wealth-agent-skills)
+- [awesome-mind-agent-skills](https://github.com/frankxai/awesome-mind-agent-skills) · [awesome-cosmos-ai-agents](https://github.com/frankxai/awesome-cosmos-ai-agents) · [awesome-automation-agent-skills](https://github.com/frankxai/awesome-automation-agent-skills) · [awesome-payment-agent-skills](https://github.com/frankxai/awesome-payment-agent-skills) · [awesome-motion-design-agent-skills](https://github.com/frankxai/awesome-motion-design-agent-skills)
+
+Last research pulse: **2026-08-03**.
+
 ## Contributing
 
 PRs welcome — add a protocol, server, library, SDK, or safety tool. Keep links live, keep claims verifiable, and say in one clause why an entry earns a reader's time. See the [contribution guidelines](CONTRIBUTING.md). One entry per PR; match the format of the section you're adding to. Payment claims especially: link the official spec/repo, and never overstate maturity (beta is beta).
