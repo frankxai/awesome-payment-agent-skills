@@ -27,6 +27,25 @@ The thesis in one line: an agent that can spend is an agent that can be exploite
 
 This list is the **L5 (Payments)** companion to [awesome-agentic-income](https://github.com/frankxai/awesome-agentic-income) (L4 — how agents *earn*). Income generates the stream; payments authorize and settle it. The two compose.
 
+<!-- earned-skill-index:2026-08-30 -->
+
+## Earned agent skills (start here)
+
+Operators get leverage from **about 5–7 named workflows**, not bulk dumps. Hub: [https://github.com/frankxai/awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills) · [earned index](https://github.com/frankxai/awesome-hermes-agent-skills/blob/main/docs/EARNED-SKILLS.md) · [safety gate](https://github.com/frankxai/awesome-hermes-agent-skills/blob/main/docs/QUALITY-AND-SAFETY.md).
+
+**Payment agent skills (mandate before settle)**
+
+| Pack | Job |
+| --- | --- |
+| [google-agentic-commerce/AP2](https://github.com/google-agentic-commerce/AP2) | Authorization mandates — does **not** move money |
+| [x402](https://www.x402.org/) | Settlement rail after a mandate |
+| [Stripe MCP](https://docs.stripe.com/mcp) | Official vendor connector |
+| [NVIDIA/SkillSpector](https://github.com/NVIDIA/SkillSpector) | Scan wallet/tx skills as software |
+| Wallet / broadcast-tx packs | **Quarantine** unless dry-run + human spend cap |
+
+Scan with [NVIDIA SkillSpector](https://github.com/NVIDIA/SkillSpector) before a live profile. Do not install unsigned ZIP/S3 skill blobs or OpenClaw mass dumps.
+
+
 ## Contents
 
 - [The Shape of an Agentic Payment](#the-shape-of-an-agentic-payment)
