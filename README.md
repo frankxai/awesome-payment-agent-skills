@@ -3,7 +3,7 @@
   <img src="assets/github/header.svg" alt="Awesome Payment Agent Skills - Curated payment protocols and safety tooling." width="100%">
 </p>
 
-<details open>
+<details>
 <summary><strong>How this repo works</strong></summary>
 <p align="center">
   <img src="assets/github/how-it-works.svg" alt="Awesome Payment Agent Skills operating map" width="100%">
