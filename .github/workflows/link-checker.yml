@@ -1,0 +1,27 @@
+name: Link Checker
+
+on:
+  pull_request:
+  schedule:
+    - cron: "0 0 * * 0"
+  workflow_dispatch:
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@v2.9.0
+        with:
+          args: >-
+            --accept=200,204,429
+            --timeout=10
+            --max-retries=3
+            --exclude-mail
+            --exclude https://github.com/frankxai/awesome-jarvis
+            *.md **/*.md
+          fail: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
