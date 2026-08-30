@@ -138,3 +138,9 @@ PRs welcome — add a protocol, server, library, SDK, or safety tool. Keep links
 ## License
 
 [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](LICENSE) — released under [CC0](LICENSE). No rights reserved.
+
+---
+
+[![Built on SIP](https://img.shields.io/badge/Built%20on-SIP-blue.svg)](https://github.com/frankxai/Starlight-Intelligence-System)
+
+**Built on SIP** — this repo composes the [Starlight Intelligence Protocol](https://github.com/frankxai/Starlight-Intelligence-System) (substrate for memory, attestation, and sovereignty). Attribution per the SIP sovereignty clause; vertical canon declined.
