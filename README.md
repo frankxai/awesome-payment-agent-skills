@@ -106,6 +106,7 @@ Build agent-side and merchant-side payment flows.
 
 - [Stripe Agentic Commerce (ACP)](https://docs.stripe.com/agentic-commerce/acp) — merchant + agent SDK for Shared Payment Token checkout; the production path behind ChatGPT Instant Checkout.
 - [Coinbase AgentKit](https://github.com/coinbase/agentkit) — "every AI agent deserves a wallet": framework-agnostic toolkit to give an agent an onchain wallet for x402-style USDC settlement. [TypeScript](https://github.com/coinbase/agentkit/tree/main/typescript) · [Python](https://github.com/coinbase/agentkit/tree/main/python).
+- [openai-agents-nano-x402](https://github.com/PANDeveloper001/openai-agents-nano-x402) — feeless XNO (Nano) x402 payer for the OpenAI Agents SDK; self-custodied, sub-second settlement, zero fee per transaction. [PyPI](https://pypi.org/project/openai-agents-nano-x402/).
 - [x402 facilitators](https://docs.x402.org/dev-tools/facilitators) — the official operator directory for services that verify and settle x402 payments, including production-provider and self-hosted paths.
 - [AgentServices](https://agentservices.to) — 54 x402-paid data APIs for AI agents (crypto, forex, stocks, AI inference). 37 MCP tools. Agents pay per-call via USDC on Base. [GitHub](https://github.com/vbkotecha/aiservices-api)
 - [Visa Intelligent Commerce for Agents](https://developer.visa.com/use-cases/visa-intelligent-commerce-for-agents) — Visa's developer use-case docs for agent-scoped tokenized credentials.
