@@ -110,6 +110,8 @@ Build agent-side and merchant-side payment flows.
 - [AgentServices](https://agentservices.to) — 54 x402-paid data APIs for AI agents (crypto, forex, stocks, AI inference). 37 MCP tools. Agents pay per-call via USDC on Base. [GitHub](https://github.com/vbkotecha/aiservices-api)
 - [nano-invoice](https://github.com/dhyabi2/nano-invoice) — bind a Nano (XNO) payment to the order it pays for: one idempotent invoice per order key, a unique tagged amount, and a ledger-verified receipt any stranger can re-check from a public node. Non-custodial, stdlib-only Python, MIT.
 - [Visa Intelligent Commerce for Agents](https://developer.visa.com/use-cases/visa-intelligent-commerce-for-agents) — Visa's developer use-case docs for agent-scoped tokenized credentials.
+- [AffixIO](https://www.npmjs.com/package/affixio) — Agentic Pay Kit with x402BeforePay host-side action attestation before pay (signed yes/no on host, not person KYC), agenticPay, mcpToolGate, and KYA createAgentTrust. ([GitHub](https://github.com/AffixIO/SDK)) ([docs](https://www.affix-io.com/agent-trust/))
+
 
 ## Safety & Audit Tooling
 
