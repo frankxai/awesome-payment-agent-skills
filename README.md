@@ -108,6 +108,7 @@ Build agent-side and merchant-side payment flows.
 - [Coinbase AgentKit](https://github.com/coinbase/agentkit) — "every AI agent deserves a wallet": framework-agnostic toolkit to give an agent an onchain wallet for x402-style USDC settlement. [TypeScript](https://github.com/coinbase/agentkit/tree/main/typescript) · [Python](https://github.com/coinbase/agentkit/tree/main/python).
 - [x402 facilitators](https://docs.x402.org/dev-tools/facilitators) — the official operator directory for services that verify and settle x402 payments, including production-provider and self-hosted paths.
 - [AgentServices](https://agentservices.to) — 54 x402-paid data APIs for AI agents (crypto, forex, stocks, AI inference). 37 MCP tools. Agents pay per-call via USDC on Base. [GitHub](https://github.com/vbkotecha/aiservices-api)
+- [nano-invoice](https://github.com/dhyabi2/nano-invoice) — bind a Nano (XNO) payment to the order it pays for: one idempotent invoice per order key, a unique tagged amount, and a ledger-verified receipt any stranger can re-check from a public node. Non-custodial, stdlib-only Python, MIT.
 - [Visa Intelligent Commerce for Agents](https://developer.visa.com/use-cases/visa-intelligent-commerce-for-agents) — Visa's developer use-case docs for agent-scoped tokenized credentials.
 
 ## Safety & Audit Tooling
